@@ -37,10 +37,11 @@ for i in range (len(lists)):
     shoppingListDeck.append(lists[i].strip('\n'))
 ```
 ### HEB Method
-Open the HebMethod.py file. To run this file, you'll need to have your ShoppingList.txt file filled out, and be sure that it's saved in the same directory as HebMethod.py. Once that's complete, there are only 3 variables in the file you'll need to update:
+Open the HebMethod.py file. To run this file, you'll need to have your ShoppingList.txt file filled out and saved in the same directory as HebMethod.py. Once that's complete, there are only 3 variables in the file you'll need to update:
 * The path to your Chromedriver file: ```chromeDriverPath = #enter the path for your chromedriver file```
 * The email associated with your online HEB account: ```email = #enter the email of your HEB account```
 * The password to the account: ```password = #enter your password for your HEB account```
 
 Once you update finish your ShoppingList.txt and update the above variables, you're ready to run HebMethod.py!
 ### HEB Scan
+For this file, you'll have to do the same updates to the ```chromeDriverPath```, ```email```, and ```password``` variables for your HEB account. However, it is this section of the project where you have to use the Twilio Messaging API integration that you performed earlier. Again, if you follow their Python quickstart tutorial, it should take you to an account dashboard where you'll find your ***account SID***, ***authorization token***, and ***Twilio phone number***.
