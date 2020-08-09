@@ -68,5 +68,8 @@ That's pretty much it!
 ## Troubleshooting
 The success of the script is heavily predicated on Chromedriver's ability to locate the different elements on the page that you want to click on. For this I primarily used ***XPath locators***, which are found by inspecting the element of a button on a webpage. 
 
-Here's what it looks like on HEB.com:
-
+### Here's what it looks like on HEB.com:
+![XPath-Example](https://user-images.githubusercontent.com/66505806/89741605-2e7ad300-da58-11ea-855e-866b290f44bf.png)
+### And here's how the code executes it:
+```python
+```
