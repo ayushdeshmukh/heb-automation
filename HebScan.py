@@ -11,11 +11,11 @@ from twilio.rest import Client
 #PRECONDITION: User has account and set address, with settings set to delivery and NOT curbside.
 
 def sendMessage(pickerString):
-    account_sid = 'AC64f312bd660ab165255edb29228d3796' # Found on Twilio Console Dashboard
-    auth_token = 'aea7a379565b0e70476a3d5dc9a53398' # Found on Twilio Console Dashboard
+    account_sid = # Found on Twilio Console Dashboard
+    auth_token =  # Found on Twilio Console Dashboard
     
-    myPhone = '+15127360151' # Phone number you used to verify your Twilio account
-    TwilioNumber = '+12055128568' # Phone number given to you by Twilio
+    myPhone = # Phone number you used to verify your Twilio account
+    TwilioNumber = # Phone number given to you by Twilio
     
     client = Client(account_sid, auth_token)
     
@@ -28,15 +28,17 @@ def login(): #logs into HEB.com from the login page
     
     driver.implicitly_wait(3000)
     
+    email = #enter the email of your HEB account
     emailXpath = '/html/body/div[1]/div[3]/div[1]/div[1]/form/div[3]/div[1]/input[1]' #enter email
     emailBox = driver.find_element_by_xpath(emailXpath) 
-    emailBox.send_keys("bobjonespythontest@gmail.com") 
+    emailBox.send_keys(email) 
     
     driver.implicitly_wait(3000)
     
+    password = #enter the password of your HEB account
     pwXpath = '/html/body/div[1]/div[3]/div[1]/div[1]/form/div[3]/div[1]/input[3]' #enter password and login
     pwBox = driver.find_element_by_xpath(pwXpath) 
-    pwBox.send_keys("pythont3st")
+    pwBox.send_keys(password)
     pwBox.send_keys(Keys.ENTER)
     
     driver.implicitly_wait(3000)
@@ -179,9 +181,9 @@ def tearDown(): #shuts down chromedriver
     driver.quit()
 
 
-
+chromeDriverPath = #path to the chromedriver file on your machine
 for i in range(3):
-    driver = webdriver.Chrome(executable_path=r"C:\Users\Ayush\Python\chromedriver.exe")
+    driver = webdriver.Chrome(executable_path=chromeDriverPath)
     driver.get("https://www.heb.com/my-account/login")
     login()
     accessTimeSlots()
