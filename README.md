@@ -16,4 +16,4 @@ This project makes use of Twilio's Messaging API to send the user an automated m
 There are 3 other files in this repository:
 * ShoppingList.txt
 * HebMethod.py
-*
+* HebScan.py
