@@ -21,7 +21,7 @@ There are 3 other files in this repository:
 * [HebScan.py](HebScan.py)
   * The file that constantly scans the HEB delivery schedule, and notifies you via text when there is an opening while blocking off that open spot.
 ### Shopping List
-Open the ShoppingList.txt file, and input your shopping list items like "eggs, milk, bananas, etc.". Write each item on their own line, allowing the HebMethod.py file to read each item as a distinct string object and append it to a list.
+Open the ShoppingList.txt file, and input your shopping list items like "eggs, milk, bananas, etc.". Write each item on its own line, allowing the HebMethod.py file to read each item as a distinct string object and append it to a list.
 #### ShoppingList.txt Example:
 ```
 eggs
@@ -37,4 +37,7 @@ for i in range (len(lists)):
     shoppingListDeck.append(lists[i].strip('\n'))
 ```
 ### HEB Method
-Open the HebMethod.py file.
+Open the HebMethod.py file. To run this file, you'll need to have your ShoppingList.txt file filled out, and be sure that it's saved in the same directory as HebMethod.py. Once that's complete, there are only 3 variables in the file you'll need to update:
+* The path to your Chromedriver file
+* The email associated with your online HEB account
+* The password to the account
