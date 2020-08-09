@@ -68,7 +68,7 @@ That's pretty much it!
 ## Troubleshooting
 The success of the script is heavily predicated on Chromedriver's ability to locate the different elements on the page that you want to click on. For this I primarily used ***XPath locators***, which are found by inspecting the element of a button on a webpage. 
 ### Here's what it looks like on HEB.com:
-![XPath-Example](https://user-images.githubusercontent.com/66505806/89741605-2e7ad300-da58-11ea-855e-866b290f44bf.png)
+
 ### And here's how the code executes it:
 ```python
 logInXpath = '/html/body/div[2]/div/div/div[2]/div/header/nav[1]/ul/li[1]/a[1]'
@@ -80,4 +80,14 @@ The XPath for some objects on the webpage often changes according to the certain
 logInXpath = #update this according to your new XPath
 ```
 ### CSS Selectors and Popups
+In HebScan.py, there's one method that doesn't use XPath to locate the element it wants to click.
+```python
+def accessTimeSlots(): # clicks on the box to trigger the timeslot popup for pickups/curbside
+    
+    driver.implicitly_wait(3000)
+    
+    timeSlotSelector = '#js-sticky-search > div.site-header__reservation-display > div > bootstrap > div > button'
+    timeSlotBox = driver.find_element_by_css_selector(timeSlotSelector)
+    timeSlotBox.click()
+```
 
