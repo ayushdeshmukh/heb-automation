@@ -13,3 +13,7 @@ pip install selenium
 This project makes use of Twilio's Messaging API to send the user an automated message whenever a delivery spot on the HEB website opens up. Follow their [Python quickstart](https://www.twilio.com/docs/sms/quickstart/python "Twilio Messaging API: Python quickstart") guide to get your ***account SID***, ***authorization token***, and ***Twilio phone number***. From there, you're ready to get started!
 
 ## Usage
+There are 3 other files in this repository:
+* ShoppingList.txt
+* HebMethod.py
+*
