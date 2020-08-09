@@ -69,5 +69,4 @@ That's pretty much it!
 The success of the script is heavily predicated on Chromedriver's ability to locate the different elements on the page that you want to click on. For this I primarily used ***XPath locators***, which are found by inspecting the element of a button on a webpage. 
 
 Here's what it looks like on HEB.com:
-![HEB XPath](/desktop/xpath-example.png)
-Format: ![Alt Text](url)
+
