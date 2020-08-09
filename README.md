@@ -44,4 +44,22 @@ Open the HebMethod.py file. To run this file, you'll need to have your ShoppingL
 
 Once you update finish your ShoppingList.txt and update the above variables, you're ready to run HebMethod.py!
 ### HEB Scan
-For this file, you'll have to do the same updates to the ```chromeDriverPath```, ```email```, and ```password``` variables for your HEB account. However, it is this section of the project where you have to use the Twilio Messaging API integration that you performed earlier. Again, if you follow their Python quickstart tutorial, it should take you to an account dashboard where you'll find your ***account SID***, ***authorization token***, and ***Twilio phone number***.
+For this file, you'll have to do the same updates to the ```chromeDriverPath```, ```email```, and ```password``` variables for your HEB account. However, it is this section of the project where you have to use the Twilio Messaging API integration that you performed earlier. Again, if you follow their Python quickstart tutorial, it should take you to an account dashboard where you'll find your ***account SID***, ***authorization token***, and ***Twilio phone number***. Using those values, update the corresponding variables in this section:
+```python
+def sendMessage(pickerString):
+    account_sid = # Found on Twilio Console Dashboard
+    auth_token =  # Found on Twilio Console Dashboard
+    
+    myPhone = # Phone number you used to verify your Twilio account
+    TwilioNumber = # Phone number given to you by Twilio
+    
+    client = Client(account_sid, auth_token)
+    
+    client.messages.create(to=myPhone,from_=TwilioNumber,body=pickerString)
+```    
+The file will then scan for open delivery spots, and when it finds one, it will reserve the slot for you and send a message to your phone that looks something like this:
+```
+Sent from your Twilio trial account 
+- Slot reserved - You're scheduled for May 03, 5:30PM-6:30PM.
+Your time slot will be held until 11:18 PM
+```
