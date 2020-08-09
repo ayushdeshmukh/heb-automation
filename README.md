@@ -63,3 +63,11 @@ Sent from your Twilio trial account
 - Slot reserved - You're scheduled for May 03, 5:30PM-6:30PM.
 Your time slot will be held until 11:18 PM
 ```
+That's pretty much it!
+
+## Troubleshooting
+The success of the script is heavily predicated on Chromedriver's ability to locate the different elements on the page that you want to click on. For this I primarily used ***XPath locators***, which are found by inspecting the element of a button on a webpage. 
+
+Here's what it looks like on HEB.com:
+![HEB XPath](/desktop/xpath-example.png)
+Format: ![Alt Text](url)
