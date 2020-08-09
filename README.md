@@ -67,7 +67,6 @@ That's pretty much it!
 
 ## Troubleshooting
 The success of the script is heavily predicated on Chromedriver's ability to locate the different elements on the page that you want to click on. For this I primarily used ***XPath locators***, which are found by inspecting the element of a button on a webpage. 
-
 ### Here's what it looks like on HEB.com:
 ![XPath-Example](https://user-images.githubusercontent.com/66505806/89741605-2e7ad300-da58-11ea-855e-866b290f44bf.png)
 ### And here's how the code executes it:
@@ -76,3 +75,9 @@ logInXpath = '/html/body/div[2]/div/div/div[2]/div/header/nav[1]/ul/li[1]/a[1]'
 logInBox = driver.find_element_by_xpath(logInXpath)
 logInBox.click()
 ```
+The XPath for some objects on the webpage often changes according to the certain specifics of that particular browsing instance. When this XPath changes, Chromedriver can no longer locate the object and the script stops. To fix this, find the button that the script couldn't find by manually going to the site. Then, using Inspect Element, copy the XpPath of the object and update the relevant XPath variable.
+```python
+logInXpath = #update this according to your new XPath
+```
+### CSS Selectors and Popups
+
