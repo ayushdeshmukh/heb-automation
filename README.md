@@ -41,5 +41,6 @@ Open the HebMethod.py file. To run this file, you'll need to have your ShoppingL
 * The path to your Chromedriver file: ```chromeDriverPath = #enter the path for your chromedriver file```
 * The email associated with your online HEB account: ```email = #enter the email of your HEB account```
 * The password to the account: ```password = #enter your password for your HEB account```
+
 Once you update finish your ShoppingList.txt and update the above variables, you're ready to run HebMethod.py!
 ### HEB Scan
