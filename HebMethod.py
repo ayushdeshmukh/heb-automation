@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 
 #PRECONDITION: user has an account, wants to re-order using the account, find a delivery slot
-
+#ShoppingList.txt is a text file containing all of your shopping list items
 
 shoppingListDeck = []
 files = open("ShoppingList.txt", "r")
@@ -19,8 +19,8 @@ for i in range (len(lists)):
 
     
       
-
-driver = webdriver.Chrome(executable_path=r"C:\Users\Ayush\Python\chromedriver.exe") #open url
+chromeDriverPath = #enter the path for your chromedriver file
+driver = webdriver.Chrome(executable_path=chromeDriverPath) #open url
 driver.get("https://www.heb.com")
     
 driver.implicitly_wait(3000)
@@ -31,15 +31,17 @@ logInBox.click()
     
 driver.implicitly_wait(3000)
 
+email = #enter the email of your HEB account
 emailXpath = '/html/body/div[1]/div[3]/div[1]/div[1]/form/div[3]/div[1]/input[1]' #enter email
 emailBox = driver.find_element_by_xpath(emailXpath) 
-emailBox.send_keys("bobjonespythontest@gmail.com") 
+emailBox.send_keys(email) 
     
 driver.implicitly_wait(3000)
-    
+
+password = #enter your password for your HEB account
 pwXpath = '/html/body/div[1]/div[3]/div[1]/div[1]/form/div[3]/div[1]/input[3]' #enter password and login
 pwBox = driver.find_element_by_xpath(pwXpath) 
-pwBox.send_keys("pythont3st")
+pwBox.send_keys(password)
 
 driver.implicitly_wait(3000)
 
@@ -64,17 +66,7 @@ def HEB(list):
         cartBox.click()
         
         driver.implicitly_wait(3000)
-        
-        """
-            driver.switch_to.active_element
-            
-            driver.implicitly_wait(3000)
-            
-            okXpath = '//*[@id="representative-product-modal___BV_modal_footer_"]/button'
-            okBox = driver.find_element_by_xpath(okXpath)
-            okBox.click()
-        """
-        
+  
         
         driver.implicitly_wait(3000)
             
