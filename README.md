@@ -68,7 +68,7 @@ That's pretty much it!
 ## Troubleshooting
 The success of the script is heavily predicated on Chromedriver's ability to locate the different elements on the page that you want to click on. For this I primarily used ***XPath locators***, which are found by inspecting the element of a button on a webpage. 
 ### Here's what it looks like on HEB.com:
-
+![xpath-example](https://user-images.githubusercontent.com/66505806/89741909-de514000-da5a-11ea-9747-c508e1439d97.png)
 ### And here's how the code executes it:
 ```python
 logInXpath = '/html/body/div[2]/div/div/div[2]/div/header/nav[1]/ul/li[1]/a[1]'
@@ -90,4 +90,4 @@ def accessTimeSlots(): # clicks on the box to trigger the timeslot popup for pic
     timeSlotBox = driver.find_element_by_css_selector(timeSlotSelector)
     timeSlotBox.click()
 ```
-
+The function accessTimeSlots() uses a CSS selector to locate the button that brings up the popup for the delivery schedule. 
