@@ -39,5 +39,6 @@ for i in range (len(lists)):
 ### HEB Method
 Open the HebMethod.py file. To run this file, you'll need to have your ShoppingList.txt file filled out, and be sure that it's saved in the same directory as HebMethod.py. Once that's complete, there are only 3 variables in the file you'll need to update:
 * The path to your Chromedriver file
+ * ```chromeDriverPath = #enter the path for your chromedriver file```
 * The email associated with your online HEB account
 * The password to the account
