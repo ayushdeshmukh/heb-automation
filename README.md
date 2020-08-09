@@ -65,7 +65,7 @@ Your time slot will be held until 11:18 PM
 ```
 That's pretty much it!
 
-## Troubleshooting
+## Troubleshooting and Support
 The success of the script is heavily predicated on Chromedriver's ability to locate the different elements on the page that you want to click on. For this I primarily used ***XPath locators***, which are found by inspecting the element of a button on a webpage. 
 ### Here's what it looks like on HEB.com:
 ![xpath-example](https://user-images.githubusercontent.com/66505806/89741909-de514000-da5a-11ea-9747-c508e1439d97.png)
@@ -79,7 +79,7 @@ The XPath for some objects on the webpage often changes according to the certain
 ```python
 logInXpath = #update this according to your new XPath
 ```
-### CSS Selectors and Popups
+### CSS Selectors
 In HebScan.py, there's one method that doesn't use XPath to locate the element it wants to click.
 ```python
 def accessTimeSlots(): # clicks on the box to trigger the timeslot popup for pickups/curbside
@@ -91,4 +91,8 @@ def accessTimeSlots(): # clicks on the box to trigger the timeslot popup for pic
     timeSlotBox.click()
 ```
 The function accessTimeSlots() uses a CSS selector to locate the button that brings up the popup for the delivery schedule. You would use the same method of Inspect Element to change the CSS selector if the need arises. Here's what it looks like on HEB's website:
+![css-selector-example](https://user-images.githubusercontent.com/66505806/89742262-f24a7100-da5d-11ea-8972-28f3723842b2.png)
+If you have any further questions, feel free to email me at ayushmax26@gmail.com
 
+## Issues and Updates
+In testing this project, I automated runs on HEB's website numerous times. Each time I did, Chrome recognized that it was being web-scraped, and as a result, eventually placed a CAPTCHA before logging in to HEB.com. This was kind of a dead end for me in this project, so I decided to just post whatever work I had completed so far on heb-automation. If anyone has any suggestions about this, feel free to email me at ayushmax26@gmail.com. Thanks!
