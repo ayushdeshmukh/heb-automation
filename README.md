@@ -90,4 +90,5 @@ def accessTimeSlots(): # clicks on the box to trigger the timeslot popup for pic
     timeSlotBox = driver.find_element_by_css_selector(timeSlotSelector)
     timeSlotBox.click()
 ```
-The function accessTimeSlots() uses a CSS selector to locate the button that brings up the popup for the delivery schedule. 
+The function accessTimeSlots() uses a CSS selector to locate the button that brings up the popup for the delivery schedule. You would use the same method of Inspect Element to change the CSS selector if the need arises. Here's what it looks like on HEB's website:
+
