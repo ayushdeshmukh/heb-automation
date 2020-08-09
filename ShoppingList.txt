@@ -2,3 +2,5 @@ milk
 bananas
 avocado
 eggs
+
+#Enter your shopping list items in the same fashion as the examples above.
