@@ -1,5 +1,5 @@
 # heb-automation
-Automate the searching, shopping, and order of grocery items through HEB Grocery's website.
+Automate the searching, shopping, and order of grocery items through [HEB Grocery's](https://www.heb.com/ "HEB") website.
 
 ## Requirements
 This project is run on Python 3.7 through [Anaconda's](https://www.anaconda.com/products/individual "Anaconda individual download site") Spyder 4 IDE.
@@ -9,6 +9,9 @@ This project is run on Python 3.7 through [Anaconda's](https://www.anaconda.com/
 ```bash
 pip install selenium
 ```
+### [Twilio](https://www.twilio.com/messaging "Twilio Messaging API")
+This project makes use of Twilio's Messaging API to send the user an automated message whenever an a delivery spot on the 
+
 From there, you're ready to get started!
 
 ## Usage
