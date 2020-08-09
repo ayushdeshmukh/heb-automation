@@ -14,6 +14,27 @@ This project makes use of Twilio's Messaging API to send the user an automated m
 
 ## Usage
 There are 3 other files in this repository:
-* ShoppingList.txt
-* HebMethod.py
-* HebScan.py
+* [ShoppingList.txt](ShoppingList.txt)
+  * Shopping list full of items that the project reads, searches for, and adds to cart in the HEB website.
+* [HebMethod.py](HebMethod.py)
+  * The file that logs into your HEB account, reads the shopping list, and searches/adds the items to your cart.
+* [HebScan.py](HebScan.py)
+  * The file that constantly scans the HEB delivery schedule, and notifies you via text when there is an opening while blocking off that open spot.
+### Shopping List
+Open the ShoppingList.txt file, and input your shopping list items like "eggs, milk, bananas, etc.". Write each item on their own line, allowing the HebMethod.py file to read each item as a distinct string object and append it to a list.
+#### ShoppingList.txt Example:
+```
+eggs
+milk
+bananas
+```
+#### Reading ShoppingList.txt in HebMethod.py
+```python
+shoppingListDeck = []
+files = open("ShoppingList.txt", "r")
+lists = files.readlines()
+for i in range (len(lists)):
+    shoppingListDeck.append(lists[i].strip('\n'))
+```
+### HEB Method
+Open the HebMethod.py file.
